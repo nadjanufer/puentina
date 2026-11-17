@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt und Erstgespräch | Puentina</title>
+  <meta name="description" content="Erstgespräch anfragen: Schreib mir, worum es geht – ich melde mich persönlich.">
+  <!-- Testphase: nicht indexieren. Vor dem Livegang entfernen (außer auf /kontakt/danke/). -->
+  <meta name="robots" content="noindex">
+  <link rel="preload" as="font" type="font/woff2" href="../fonts/nunito-sans-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/reveal.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html" aria-label="Puentina by Nadja, zur Startseite">
+      <svg viewBox="0 0 250 104" width="150" height="62" aria-hidden="true" focusable="false">
+        <g transform="translate(206 26)"><circle r="9" fill="#E3B23C"/><g stroke="#E3B23C" stroke-width="2.4" stroke-linecap="round"><line x1="11.5" y1="0" x2="17" y2="0"/><line x1="8.13" y1="8.13" x2="12.02" y2="12.02"/><line x1="0" y1="11.5" x2="0" y2="17"/><line x1="-8.13" y1="8.13" x2="-12.02" y2="12.02"/><line x1="-11.5" y1="0" x2="-17" y2="0"/><line x1="-8.13" y1="-8.13" x2="-12.02" y2="-12.02"/><line x1="0" y1="-11.5" x2="0" y2="-17"/><line x1="8.13" y1="-8.13" x2="12.02" y2="-12.02"/></g></g>
+        <path d="M14 52 C50 10 160 6 214 42 C162 13 54 17 19 56 Z" fill="#E3B23C"/>
+        <path d="M24 58 C62 22 160 18 206 48" fill="none" stroke="#5FA8D3" stroke-width="2" stroke-linecap="round"/>
+        <text x="118" y="78" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-weight="600" font-size="40" fill="#5F6F3A" style="font-variation-settings:'SOFT' 100,'WONK' 1" rotate="-3 2 -2 3 -2 2 -3 2">Puentina</text>
+        <text x="182" y="97" text-anchor="middle" font-family="Caveat, cursive" font-weight="500" font-size="20" fill="#1B4965" transform="rotate(-5 182 97)">by Nadja</text>
+      </svg>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">Menü</label>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="../leistungen/index.html">Leistungen</a></li>
+          <li><a href="../ratgeber/index.html">Ratgeber</a></li>
+          <li><a href="../ueber-mich/index.html">Über mich</a></li>
+          <li><a href="../kontakt/index.html" aria-current="page">Kontakt</a></li>
+          <li><a class="lang" href="../es/index.html" hreflang="es" lang="es">Español</a></li>
+          <li><a class="btn" href="../kontakt/index.html">Erstgespräch anfragen</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="inhalt">
+    <section class="page-hero" aria-labelledby="titel">
+      <div class="container">
+        <h1 id="titel">Lass uns sprechen: dein Erstgespräch</h1>
+        <p class="lead">Schreib mir, worum es geht – ich melde mich persönlich.</p>
+        <p class="meta">Per Video · ca. 30–45 Minuten · kostenlos und unverbindlich · Antwort innerhalb von zwei Werktagen</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="betrieb">
+      <div class="container split" style="align-items:start">
+        <div>
+          <h2 id="betrieb">Erzähl mir von deinem Betrieb</h2>
+          <!-- Formular-Dienst noch offen: action zeigt vorerst auf die Danke-Seite -->
+          <form class="form" action="danke/index.html" method="post">
+            <div><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required></div>
+            <div><label for="email">E-Mail *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            <div><label for="betrieb-name">Betrieb oder Website (freiwillig)</label><input id="betrieb-name" name="betrieb" autocomplete="organization"></div>
+            <div>
+              <label for="sprache">In welcher Sprache willst du sichtbar werden? (freiwillig)</label>
+              <select id="sprache" name="sprache"><option value="">Bitte wählen</option><option>Spanisch</option><option>Deutsch</option><option>Englisch oder Französisch</option><option>Weiß ich noch nicht</option></select>
+            </div>
+            <div><label for="nachricht">Nachricht *</label><textarea id="nachricht" name="nachricht" placeholder="Was hast du vor?" required></textarea><p class="hint">Auch eine grobe Idee reicht – du musst noch nicht wissen, welcher Baustein passt. Du kannst mir natürlich auch per Sie schreiben.</p></div>
+            <div class="hp" aria-hidden="true"><label for="website-feld">Bitte leer lassen</label><input id="website-feld" name="website" tabindex="-1" autocomplete="off"></div>
+            <p class="hint">Ich nutze deine Angaben nur, um deine Anfrage zu beantworten. Mehr in der <a href="../datenschutz/index.html">Datenschutzerklärung</a>. <span class="placeholder">[Platzhalter] Hinweis oder Checkbox – rechtlich prüfen</span></p>
+            <div><button class="btn" type="submit">Erstgespräch anfragen</button></div>
+          </form>
+        </div>
+        <div>
+          <h2 id="weiter">So geht es nach deiner Anfrage weiter</h2>
+          <ol>
+            <li><h3>Antwort</h3><p>innerhalb von zwei Werktagen.</p></li>
+            <li><h3>Gespräch per Video</h3><p>ca. 30–45 Minuten, kostenlos und unverbindlich.</p></li>
+            <li><h3>Dein Angebot</h3><p>passend zu deinem Betrieb.</p></li>
+          </ol>
+          <p><a href="../ratgeber/social-media-betreuung-kosten/index.html">Was kostet Social-Media-Betreuung? →</a></p>
+          <h2 id="direkt">Lieber direkt schreiben?</h2>
+          <ul>
+            <li>E-Mail: [Platzhalter: Adresse mit eigener Domain, folgt mit der Domain]</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/nadja-nufer98" rel="me noopener">Nadja Nufer</a></li>
+            <!-- Instagram: Link erst einfügen, wenn das Puentina-Konto existiert -->
+
+          </ul>
+          <p lang="es">¿Tu empresa está en España? <a href="../es/index.html#contacto">Escríbeme en español →</a></p>
+          <div class="split" style="grid-template-columns:120px 1fr;gap:16px;margin-top:20px">
+            <div class="photo"><img src="../img/nadja-el-torcal.jpg" width="800" height="1000" alt="Nadja" loading="lazy"></div>
+            <p class="mt-0">Du schreibst direkt mir – nicht einer Agentur.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--olive faq" aria-labelledby="gefragt">
+      <div class="container">
+        <h2 id="gefragt">Kurz gefragt</h2>
+        <details><summary><h3>Kostet das Erstgespräch etwas?</h3></summary><p>Nein. Das Erstgespräch ist kostenlos und unverbindlich. In 30 bis 45 Minuten per Video schauen wir, was du vorhast und ob wir zusammenpassen. Ein Angebot bekommst du danach nur, wenn du es möchtest.</p></details>
+        <details><summary><h3>Muss ich schon wissen, welche Leistung ich brauche?</h3></summary><p>Nein. Erzähl einfach, was du vorhast – welcher Baustein passt, klären wir im Gespräch.</p></details>
+        <details><summary><h3>Arbeitest du auch mit Betrieben in Spanien?</h3></summary><p>Ja. Für Betriebe in Spanien gibt es eine eigene Seite auf Spanisch: <a href="../es/index.html" lang="es">Servicios en español</a>.</p></details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>Puentina · by Nadja</strong>
+          <p>zwischen Sprachen und Kulturen</p>
+        </div>
+        <div>
+          <h2>Leistungen</h2>
+          <ul>
+            <li><a href="../leistungen/index.html">Alle Leistungen</a></li>
+            <li><a href="../leistungen/index.html#check">Social-Media-Check</a></li>
+            <li><a href="../leistungen/index.html#community">Community-Betreuung</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Wissen</h2>
+          <ul>
+            <li><a href="../ratgeber/index.html">Ratgeber</a></li>
+            <li><a href="../ratgeber/social-media-betreuung-kosten/index.html">Was kostet Social-Media-Betreuung?</a></li>
+            <li><a href="../es/blog/desestacionalizar-hotel/index.html" hreflang="es" lang="es">Desestacionalizar tu hotel</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Puentina</h2>
+          <ul>
+            <li><a href="../ueber-mich/index.html">Über mich</a></li>
+            <li><a href="../kontakt/index.html">Kontakt und Erstgespräch</a></li>
+            <li><a href="../es/index.html" hreflang="es" lang="es">Español</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Rechtliches</h2>
+          <ul>
+            <li><a href="../impressum/index.html">Impressum</a></li>
+            <li><a href="../datenschutz/index.html">Datenschutz</a></li>
+            <li><a href="../datenschutz/index.html#cookies">Cookie-Einstellungen</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Puentina · Nadja Nufer</span>
+        <span><a href="https://www.linkedin.com/in/nadja-nufer98" rel="me noopener">LinkedIn</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Schriften – lokal eingebunden (nicht von Google-Servern geladen)
+Abruf: 13.11.2026 von fonts.gstatic.com (Google Fonts), Zeichensatz "latin" (enthält ä ö ü ß ñ é ¿ ¡)
+
+fraunces-latin.woff2          Fraunces, normal, Gewicht 500–600 (variabel, mit SOFT/WONK)
+fraunces-italic-latin.woff2   Fraunces, kursiv, Gewicht 500–600 (variabel, mit SOFT/WONK) – Logo
+nunito-sans-latin.woff2       Nunito Sans, Gewicht 400–700 (variabel)
+caveat-500-latin.woff2        Caveat, Gewicht 500
+
+Lizenz: alle drei Schriften stehen laut Google Fonts unter der SIL Open Font License 1.1
+(https://openfontlicense.org). Lizenzbedingungen vor dem Livegang selbst prüfen.
