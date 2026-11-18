@@ -183,14 +183,17 @@
     <section class="section" id="contacto" aria-labelledby="hablemos">
       <div class="container">
         <h2 id="hablemos">Hablemos</h2>
-        <form class="form" action="#" method="post">
+        <!-- Netlify Forms: Formular „contacto“, Bestätigungsseite /es/gracias/, Honeypot-Feld „website“ -->
+        <form class="form" name="contacto" action="gracias/index.html" method="post" data-netlify="true" netlify-honeypot="website">
+          <input type="hidden" name="form-name" value="contacto">
           <div><label for="nombre">Nombre *</label><input id="nombre" name="nombre" autocomplete="name" required></div>
           <div><label for="hotel">Hotel / empresa</label><input id="hotel" name="hotel" autocomplete="organization"></div>
           <div><label for="correo">Email *</label><input id="correo" name="email" type="email" autocomplete="email" required></div>
           <div><label for="localidad">Localidad / región</label><input id="localidad" name="localidad"></div>
           <div><label for="mensaje">Mensaje *</label><textarea id="mensaje" name="mensaje" required></textarea><p class="hint">Cuéntame qué necesitas, aunque no sepas qué servicio.</p></div>
           <div class="hp" aria-hidden="true"><label for="web-es">Deja este campo vacío</label><input id="web-es" name="website" tabindex="-1" autocomplete="off"></div>
-          <p class="hint">Información básica sobre protección de datos: <a href="../es/privacidad/index.html">Privacidad</a>. <span class="placeholder">[Platzhalter] Primera capa (tabla) según Seitenkonzept-Rechtsseiten.md</span></p>
+          <!-- Primera capa de información (AEPD), Spanisch ungeprüft, keine Rechtsberatung -->
+          <p class="hint"><strong>Información básica sobre protección de datos.</strong> Responsable: Nadja Nufer (Puentina). Finalidad: responder a tu consulta y, si lo deseas, preparar una propuesta. Legitimación: medidas precontractuales a petición tuya (art. 6.1.b RGPD). Destinatarios: Netlify, que aloja este sitio y recibe el formulario; no cedo tus datos a terceros salvo obligación legal. Derechos: acceso, rectificación, supresión y otros. Más información en la <a href="../es/privacidad/index.html">política de privacidad</a>.</p>
           <div><button class="btn" type="submit">Reserva una primera llamada</button></div>
         </form>
       </div>
