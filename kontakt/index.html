@@ -54,8 +54,9 @@
       <div class="container split" style="align-items:start">
         <div>
           <h2 id="betrieb">Erzähl mir von deinem Betrieb</h2>
-          <!-- Formular-Dienst noch offen: action zeigt vorerst auf die Danke-Seite -->
-          <form class="form" action="danke/index.html" method="post">
+          <!-- Netlify Forms: Netlify erkennt das Formular beim Veröffentlichen (data-netlify), Honeypot-Feld „website“ gegen Spam -->
+          <form class="form" name="kontakt" action="danke/index.html" method="post" data-netlify="true" netlify-honeypot="website">
+            <input type="hidden" name="form-name" value="kontakt">
             <div><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required></div>
             <div><label for="email">E-Mail *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
             <div><label for="betrieb-name">Betrieb oder Website (freiwillig)</label><input id="betrieb-name" name="betrieb" autocomplete="organization"></div>
@@ -65,7 +66,7 @@
             </div>
             <div><label for="nachricht">Nachricht *</label><textarea id="nachricht" name="nachricht" placeholder="Was hast du vor?" required></textarea><p class="hint">Auch eine grobe Idee reicht – du musst noch nicht wissen, welcher Baustein passt. Du kannst mir natürlich auch per Sie schreiben.</p></div>
             <div class="hp" aria-hidden="true"><label for="website-feld">Bitte leer lassen</label><input id="website-feld" name="website" tabindex="-1" autocomplete="off"></div>
-            <p class="hint">Ich nutze deine Angaben nur, um deine Anfrage zu beantworten. Mehr in der <a href="../datenschutz/index.html">Datenschutzerklärung</a>. <span class="placeholder">[Platzhalter] Hinweis oder Checkbox – rechtlich prüfen</span></p>
+            <p class="hint">Ich nutze deine Angaben nur, um deine Anfrage zu beantworten. Die Nachricht wird über meinen Hoster Netlify übermittelt. Mehr in der <a href="../datenschutz/index.html">Datenschutzerklärung</a>.</p>
             <div><button class="btn" type="submit">Erstgespräch anfragen</button></div>
           </form>
         </div>
@@ -79,7 +80,7 @@
           <p><a href="../ratgeber/social-media-betreuung-kosten/index.html">Was kostet Social-Media-Betreuung? →</a></p>
           <h2 id="direkt">Lieber direkt schreiben?</h2>
           <ul>
-            <li>E-Mail: [Platzhalter: Adresse mit eigener Domain, folgt mit der Domain]</li>
+            <li>E-Mail: <a href="mailto:nadja.nufer@web.de">nadja.nufer@web.de</a></li><!-- vorläufig; bei Puentina-Domain ersetzen -->
             <li>LinkedIn: <a href="https://www.linkedin.com/in/nadja-nufer98" rel="me noopener">Nadja Nufer</a></li>
             <!-- Instagram: Link erst einfügen, wenn das Puentina-Konto existiert -->
 

@@ -223,6 +223,7 @@ ul { padding-left: 1.2em; }
 /* Platzhalter für fehlende Inhalte (vor Veröffentlichung entfernen) */
 .hint .placeholder { display: block; margin-top: 8px; } /* Platzhalter im Formular-Hinweis in eigener Zeile */
 .placeholder { background: var(--tone-sky); border: 2px dashed var(--sky); color: var(--grey-blue); padding: 14px 16px; border-radius: var(--radius); font-size: 0.95rem; }
+span.placeholder { display: inline-block; padding: 0 8px; margin: 2px 0; line-height: 1.5; } /* Platzhalter mitten im Text, z. B. Adresse im Impressum */
 
 /* ---------- 8 · Karten ---------- */
 .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
