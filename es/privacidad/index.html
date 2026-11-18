@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Cookie-Banner (Cookiebot): als erstes Skript laden -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="215846e2-61b6-4481-9c07-d3b5b7259821" data-culture="es" type="text/javascript"></script>
   <title>Política de privacidad | Puentina</title>
   <meta name="description" content="Política de privacidad de Puentina · by Nadja.">
   <!-- Testphase: nicht indexieren. Vor dem Livegang entfernen (außer auf /kontakt/danke/). -->
@@ -45,7 +47,8 @@
         <h1 id="titel">Política de privacidad</h1>
         <p class="placeholder">[Platzhalter] Spanische Fassung der Datenschutzerklärung (Generator oder Übersetzung, selbst prüfen). Spanisch ungeprüft, keine Rechtsberatung.</p>
         <h2 id="cookies">Cookies</h2>
-        <p class="placeholder">[Platzhalter]</p>
+        <p>Para gestionar tu consentimiento uso Cookiebot. Aquí puedes ver qué cookies utiliza este sitio web y cambiar o retirar tu consentimiento en cualquier momento.</p>
+        <script id="CookieDeclaration" src="https://consent.cookiebot.com/215846e2-61b6-4481-9c07-d3b5b7259821/cd.js" data-culture="es" type="text/javascript" async></script>
       </div>
     </section>
 
@@ -79,7 +82,7 @@
           <ul>
             <li><a href="../../es/aviso-legal/index.html">Aviso legal</a></li>
             <li><a href="../../es/privacidad/index.html">Privacidad</a></li>
-            <li><a href="../../es/privacidad/index.html#cookies">Configuración de cookies</a></li>
+            <li><a href="../../es/privacidad/index.html#cookies" onclick="if(window.Cookiebot){Cookiebot.renew();return false;}">Configuración de cookies</a></li>
           </ul>
         </div>
       </div>
