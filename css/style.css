@@ -201,6 +201,29 @@ ul { padding-left: 1.2em; }
 .steps { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; list-style: none; padding: 0; margin: 20px 0 0; font-weight: 700; }
 .steps li { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; }
 .steps-label { margin: 24px 0 0; font-weight: 700; }
+/* Belebung 20.11.2026: Handschrift-Notiz, Brücken-Trenner, Polaroids, schwebende Icons */
+.hand-note { font-family: var(--font-hand); font-size: 1.7rem; font-weight: 700; color: var(--olive-dark); line-height: 1.1; margin: 0 0 4px; display: inline-block; transform: rotate(-3deg); transform-origin: left bottom; }
+.center-note { display: block; text-align: center; transform: rotate(-2deg); transform-origin: center; }
+.center-title { text-align: center; }
+.bridge-divider { max-width: 980px; margin: 0 auto; padding: 8px 20px 0; }
+.bridge-divider svg { display: block; width: 100%; height: auto; }
+.bridge-divider .deck { stroke: var(--mustard); stroke-width: 5; stroke-linecap: round; fill: none; }
+.bridge-divider .arches { stroke: var(--olive); stroke-width: 3; fill: none; stroke-linejoin: round; }
+.bridge-divider .water { stroke: var(--sky); stroke-width: 2.5; stroke-dasharray: 26 14; stroke-linecap: round; fill: none; }
+.polaroids { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 22px; margin: 32px auto 0; padding: 0 6px; max-width: 860px; }
+@media (min-width: 760px) { .polaroids { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 44px; } }
+.polaroid { margin: 0; background: #FFFFFF; padding: 12px 12px 14px; box-shadow: 0 6px 18px rgba(27, 73, 101, .14); transform: rotate(-3deg); transition: transform .4s ease; }
+.polaroid:nth-child(even) { transform: rotate(2.5deg); margin-top: 18px; }
+.polaroid:nth-child(3n) { transform: rotate(-1.5deg); }
+.polaroid:hover { transform: rotate(0) scale(1.03); }
+.polaroid img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+.polaroid figcaption { font-family: var(--font-hand); font-size: 1.45rem; color: var(--blue); text-align: center; margin-top: 8px; line-height: 1.1; }
+@keyframes float-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+.icon-brand { animation: float-soft 5s ease-in-out infinite; animation-delay: calc(var(--d, 0) * -1.2s); }
+@media (prefers-reduced-motion: reduce) {
+  .icon-brand { animation: none; }
+  .polaroid, .polaroid:hover { transition: none; }
+}
 .jump-line { margin: 16px 0 0; font-weight: 700; } /* Sprung zu den Branchen, nach Findtest 19.11.2026 */
 .hero .jump-line { margin-top: 20px; }
 .hero .jump-line a { color: #FBE7A8; }
