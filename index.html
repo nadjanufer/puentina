@@ -12,7 +12,9 @@
   <!-- Google Search Console: Bestätigung der Inhaberschaft (HTML-Tag, nur auf der Startseite nötig) -->
   <meta name="google-site-verification" content="Bs1DngyJ18Xqt9la7c7CyZ42F32f2w_-yp_YoNcK3kw">
   <link rel="preload" as="font" type="font/woff2" href="fonts/nunito-sans-latin.woff2" crossorigin>
-  <link rel="preload" as="image" href="img/roemische-bruecke-cordoba-sonnenuntergang.jpg">
+  <!-- Titelbild vorladen: je Bildschirmbreite nur die passende Fassung (sonst lädt das Handy beide) -->
+  <link rel="preload" as="image" href="img/roemische-bruecke-cordoba-sonnenuntergang-mobil.jpg" media="(max-width: 759px)">
+  <link rel="preload" as="image" href="img/roemische-bruecke-cordoba-sonnenuntergang.jpg" media="(min-width: 760px)">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/reveal.js" defer></script>
 </head>

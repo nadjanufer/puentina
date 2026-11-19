@@ -10,7 +10,9 @@
   <!-- Testphase: nicht indexieren. Vor dem Livegang entfernen (außer auf /kontakt/danke/). -->
   <meta name="robots" content="noindex">
   <link rel="preload" as="font" type="font/woff2" href="../fonts/nunito-sans-latin.woff2" crossorigin>
-  <link rel="preload" as="image" href="../img/medina-azahara-boegen.jpg">
+  <!-- Titelbild vorladen: je Bildschirmbreite nur die passende Fassung (sonst lädt das Handy beide) -->
+  <link rel="preload" as="image" href="../img/medina-azahara-boegen-mobil.jpg" media="(max-width: 759px)">
+  <link rel="preload" as="image" href="../img/medina-azahara-boegen.jpg" media="(min-width: 760px)">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/reveal.js" defer></script>
 </head>
