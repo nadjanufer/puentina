@@ -202,6 +202,8 @@ ul { padding-left: 1.2em; }
 .steps li { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; }
 .steps-label { margin: 24px 0 0; font-weight: 700; }
 .jump-line { margin: 16px 0 0; font-weight: 700; } /* Sprung zu den Branchen, nach Findtest 19.11.2026 */
+.hero .jump-line { margin-top: 20px; }
+.hero .jump-line a { color: #FBE7A8; }
 /* Zeitstrahl (Über mich): senkrechte Linie mit Punkten */
 .timeline { list-style: none; padding: 0 0 0 4px; margin: 20px 0 28px; border-left: 3px solid var(--mustard); display: grid; gap: 14px; }
 .timeline li { position: relative; padding-left: 20px; }
