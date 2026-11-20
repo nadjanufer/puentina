@@ -247,6 +247,9 @@ ul { padding-left: 1.2em; }
 }
 .jump-line { margin: 16px 0 0; font-weight: 700; } /* Sprung zu den Branchen, nach Findtest 19.11.2026 */
 .hero .jump-line { margin-top: 20px; }
+#kosten { scroll-margin-top: 80px; }
+.price-hints .card h3 { margin-top: 2px; }
+.price-hints .meta { margin: 0; font-weight: 700; color: var(--olive-dark); text-transform: uppercase; letter-spacing: .06em; font-size: .8rem; }
 .hero .jump-line a { color: #FBE7A8; }
 /* Zeitstrahl (Über mich): senkrechte Linie mit Punkten */
 .timeline { list-style: none; padding: 0 0 0 4px; margin: 20px 0 28px; border-left: 3px solid var(--mustard); display: grid; gap: 14px; }
