@@ -138,6 +138,12 @@ ul { padding-left: 1.2em; }
 .main-nav ul { list-style: none; margin: 0; padding: 12px var(--gutter) 20px; display: grid; gap: 4px; }
 .main-nav a { display: block; padding: 10px 4px; color: var(--blue); text-decoration: none; font-weight: 600; }
 .main-nav a[aria-current="page"] { color: var(--olive-dark); text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: var(--mustard); }
+/* Handy-Menü (20.11.2026, Findtest): aktive Seite als Fläche, Gesprächs-Knopf ruhiger */
+@media (max-width: 959px) {
+  .main-nav a[aria-current="page"] { background: var(--tone-olive); border-radius: 10px; padding-left: 12px; text-decoration: none; border-left: 5px solid var(--mustard); }
+  .main-nav a[aria-current="page"]::after { content: " · hier bist du"; font-weight: 400; font-size: .85em; color: var(--grey-blue); }
+  .main-nav a.btn, .main-nav a.btn:visited { background: transparent; color: var(--olive-dark) !important; border: 2px solid var(--olive); box-shadow: none; margin-top: 8px; padding: 10px 16px; text-align: center; }
+}
 .main-nav .lang { font-weight: 700; }
 @media (min-width: 960px) {
   .nav-toggle-label { display: none; }
@@ -208,8 +214,8 @@ ul { padding-left: 1.2em; }
 .bridge-divider { max-width: 980px; margin: 0 auto; padding: 8px 20px 0; }
 .bridge-divider svg { display: block; width: 100%; height: auto; }
 .bridge-divider .deck { stroke: var(--mustard); stroke-width: 5; stroke-linecap: round; fill: none; }
-.bridge-divider .arches { stroke: var(--olive); stroke-width: 3; fill: none; stroke-linejoin: round; }
-.bridge-divider .water { stroke: var(--sky); stroke-width: 2.5; stroke-dasharray: 26 14; stroke-linecap: round; fill: none; }
+.bridge-divider .arches { stroke: var(--olive); stroke-width: 3.5; fill: none; stroke-linecap: round; }
+.bridge-divider .water { stroke: var(--sky); stroke-width: 2.5; stroke-linecap: round; fill: none; opacity: .7; }
 .polaroids { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 22px; margin: 32px auto 0; padding: 0 6px; max-width: 860px; }
 @media (min-width: 760px) { .polaroids { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 44px; } }
 .polaroid { margin: 0; background: #FFFFFF; padding: 12px 12px 14px; box-shadow: 0 6px 18px rgba(27, 73, 101, .14); transform: rotate(-3deg); transition: transform .4s ease; }
@@ -218,6 +224,19 @@ ul { padding-left: 1.2em; }
 .polaroid:hover { transform: rotate(0) scale(1.03); }
 .polaroid img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
 .polaroid figcaption { font-family: var(--font-hand); font-size: 1.45rem; color: var(--blue); text-align: center; margin-top: 8px; line-height: 1.1; }
+.word-ticker { overflow: hidden; border-block: 2px solid var(--mustard); background: var(--page); padding: 14px 0; }
+.word-ticker__track { display: flex; width: max-content; list-style: none; margin: 0; padding: 0; animation: ticker 48s linear infinite; }
+.word-ticker:hover .word-ticker__track { animation-play-state: paused; }
+.word-ticker li { display: flex; align-items: baseline; gap: 10px; padding: 0 34px; font-family: var(--font-hand); font-size: 1.9rem; font-weight: 700; white-space: nowrap; line-height: 1.2; }
+.word-ticker .de { color: var(--blue); }
+.word-ticker .es { color: var(--olive-dark); }
+.word-ticker .br { color: var(--mustard); font-family: var(--font-body, sans-serif); font-size: 1.2rem; transform: translateY(-4px); }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .word-ticker__track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; row-gap: 6px; }
+  .word-ticker li[aria-hidden="true"] { display: none; }
+  .word-ticker li { font-size: 1.45rem; padding: 0 18px; }
+}
 @keyframes float-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 .icon-brand { animation: float-soft 5s ease-in-out infinite; animation-delay: calc(var(--d, 0) * -1.2s); }
 @media (prefers-reduced-motion: reduce) {
