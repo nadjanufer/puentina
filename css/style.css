@@ -142,6 +142,7 @@ ul { padding-left: 1.2em; }
 @media (max-width: 959px) {
   .main-nav a[aria-current="page"] { background: var(--tone-olive); border-radius: 10px; padding-left: 12px; text-decoration: none; border-left: 5px solid var(--mustard); }
   .main-nav a[aria-current="page"]::after { content: " · hier bist du"; font-weight: 400; font-size: .85em; color: var(--grey-blue); }
+  .main-nav a[aria-current="page"]:lang(es)::after { content: " · estás aquí"; }
   .main-nav a.btn, .main-nav a.btn:visited { background: transparent; color: var(--olive-dark) !important; border: 2px solid var(--olive); box-shadow: none; margin-top: 8px; padding: 10px 16px; text-align: center; }
 }
 .main-nav .lang { font-weight: 700; }
