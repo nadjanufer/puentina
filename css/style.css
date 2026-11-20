@@ -234,9 +234,10 @@ ul { padding-left: 1.2em; }
 .word-ticker .br { color: var(--mustard); font-family: var(--font-body, sans-serif); font-size: 1.2rem; transform: translateY(-4px); }
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) {
-  .word-ticker__track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; row-gap: 6px; }
+  /* ohne Bewegung: eine Zeile zum seitlichen Wischen statt Laufband */
+  .word-ticker { overflow-x: auto; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
+  .word-ticker__track { animation: none; }
   .word-ticker li[aria-hidden="true"] { display: none; }
-  .word-ticker li { font-size: 1.45rem; padding: 0 18px; }
 }
 @keyframes float-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 .icon-brand { animation: float-soft 5s ease-in-out infinite; animation-delay: calc(var(--d, 0) * -1.2s); }
@@ -329,6 +330,7 @@ span.placeholder { display: inline-block; padding: 0 8px; margin: 2px 0; line-he
 .lang-badge { position: absolute; left: 12px; top: 12px; z-index: 1; padding: 4px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.02em; background: var(--white); color: var(--olive-dark); border: 2px solid var(--olive); }
 .post-card[lang="es"] { background: var(--tone-mustard); border: 1px solid var(--mustard); border-top: 6px solid var(--mustard); }
 .post-card[lang="es"].card--plan { border-style: dashed; border-top-style: solid; }
+.free-badge { position: absolute; right: 12px; top: 12px; z-index: 1; padding: 4px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 700; background: var(--mustard); color: var(--blue); } /* Findtest 20.11.2026: Vorlage sichtbar machen */
 .post-card[lang="es"] .lang-badge { background: var(--blue); color: var(--white); border-color: var(--blue); }
 .post-card.card--feature:not([lang="es"]) { border-top-color: var(--olive); } /* Senfgelb bleibt den spanischen Karten vorbehalten */
 .lang-tag { display: inline-block; margin-left: 6px; padding: 1px 8px; border: 2px solid var(--sky); border-radius: 999px; color: var(--blue); font-size: 0.75rem; letter-spacing: 0.06em; vertical-align: 1px; } /* Hinweis „ES“: Beitrag auf Spanisch */
